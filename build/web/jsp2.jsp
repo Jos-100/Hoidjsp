@@ -29,13 +29,16 @@
         <a href="jsp1.jsp<%=cad%>">Regresar a jsp1 con dato aleatorio>
         <a href="jsp1.jsp">Regresar a jsp1 sin dato generado</a>
         <br><br>
-        <table border="1">
-            <tr>
-                <td>Nombre</td>
-                <td>Cal</td>
-            </tr>
+        <table class="table">
+             <thead class="tablita">
+                <tr>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Calificación</th>
+
+                </tr>
+              </thead>
             <%
-                if(negocio.getLista() != null && negocio.getLista().isEmpty())
+                if(negocio.getLista() != null && ! negocio.getLista().isEmpty())
                 {
                     for(Datos datos : negocio.getLista())
                     {
